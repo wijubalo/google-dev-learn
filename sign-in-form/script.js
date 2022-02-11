@@ -1,17 +1,18 @@
 const passwordInput = document.getElementById('password');
 const togglePasswordButton = document.getElementById('toggle-password');
+const togglePasswordIcon = document.getElementById('toggle-password-icon');
 
 togglePasswordButton.addEventListener('click', togglePassword);
 
 function togglePassword() {
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        togglePasswordButton.textContent = 'Hide password';
+        togglePasswordIcon.textContent = 'visibility_off';
         togglePasswordButton.setAttribute('aria-label',
             'Hide password.');
     } else {
         passwordInput.type = 'password';
-        togglePasswordButton.textContent = 'Show password';
+        togglePasswordIcon.textContent = 'visibility';
         togglePasswordButton.setAttribute('aria-label',
             'Show password as plain text. ' +
             'Warning: this will display your password on the screen.');
